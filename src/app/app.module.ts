@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { Component, NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './components/app/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,6 +13,14 @@ const routs: Routes = [
   {
     path: 'Home',
     component: HomeComponent
+  },
+  {
+    path: 'Proyects',
+    component: ProyectsComponent
+  },
+  {
+    path: 'Contact',
+    component: ContactComponent
   }
 ];
 
@@ -26,6 +34,7 @@ const routs: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routs)
   ],
   providers: [],
