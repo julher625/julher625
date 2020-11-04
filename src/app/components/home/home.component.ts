@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {trigger, state, style, animate, transition, keyframes} from '@angular/animations';
+import {trigger, style, animate, transition, keyframes} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
