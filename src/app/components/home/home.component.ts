@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations'
 
 @Component({
@@ -14,11 +14,16 @@ import {trigger, state, style, animate, transition} from '@angular/animations'
     ])
   ]
 })
-export class HomeComponent{
+export class HomeComponent implements AfterViewInit{
   public state = 'init';
 
   constructor() {}
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.init();
+    });
+  }
 
   init(): void {
     this.state = 'start';
