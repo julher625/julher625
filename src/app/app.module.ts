@@ -6,7 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ServicesComponent } from './services/services.component';
+import { ServicesComponent } from './components/services/services.component';
 
 
 const routs: Routes = [
