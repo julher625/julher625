@@ -1,16 +1,16 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {trigger, state, style, animate, transition} from '@angular/animations'
+import {trigger, state, style, animate, transition, keyframes} from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass'],
   animations: [
-    trigger('aniHome',[
-      state('init', style({opacity: 0})),
-      state('start', style({opacity: 1})),
-      transition('init => start', animate('1000ms ease-in')),
-      transition('start => init', animate('1000ms ease-out'))
+    trigger('aniHome', [
+      transition('init => start', animate('1.2s ease-in', keyframes([
+        style({opacity: 0, offset: 0}),
+        style({opacity: 1, offset: 1})
+      ]))),
     ])
   ]
 })

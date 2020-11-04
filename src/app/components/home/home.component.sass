@@ -1,20 +1,68 @@
 
+@-webkit-keyframes nameBox
+    0%  
+        left: 0
+        width: 0
+    50%  
+        left: 0
+        width: 100%
+    100%  
+        left: 100%
+        width: 0
+
+@keyframes nameBox
+    0%  
+        left: 100%
+        width: 0
+    50%  
+        left: 0
+        width: 100%
+    100%  
+        left: 100%
+        width: 0
+
+
+
+
 @media only screen and (min-width: 960px)
 
     #parent_div_1 
         width: 70%
         margin-right: 10px
-        float: left    
+        float: left
+        display: block    
 
     #parent_div_2
 
         width: 25%
-        float: right 
-        padding: 0
+        float: left 
+        padding: 25px
+        display: block
+
+
+@media screen and (max-width: 600px)
+
+    #parent_div_1
+        width: 100%
+        float: none
+        display: block
+        text-align: left 
+        display: block
+
+    #parent_div_2
+        width: 100%
+        float: none
+        display: block
+        text-align: left
+        padding: 20px
+        display: block
+    .Name
+        font-size: 30px
+
+
 
 .Info
     color: white
-    //color: #BAD5E8
     background-color:#353A3D
     text-align: left
     padding: 12px
@@ -23,10 +71,13 @@
     line-height: 30px
     border-radius: 4px
     float: left
-
     height: 100%
-    weigth: 500px
-    // overflow: hidden
+    width: 100%
+
+    
+
+
+
 .Name
     color: white
     float: left
@@ -37,24 +88,25 @@
     line-height: 100px
     border-radius: 4px
     height: 100%
-    weigth: 800px
+    weigth: 800px 
+    display: block
+
+.Name h1 
+    display: block
+    width: fit-content
+    position: relative
+
+.Name h1 span
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 100%
+    background-color: #BAD5E8
+    -webkit-animation: nameBox 1s ease
+    animation: nameBox 1s ease
 
 
 
 
 
-@media screen and (max-width: 600px)
-
-    #parent_div_1
-        width: 100%
-        float: none
-        display: block
-        text-align: left  
-
-    #parent_div_2
-        width: 100%
-        float: none
-        display: block
-        text-align: left
-    .Name
-        font-size: 30px

@@ -11,7 +11,6 @@ export class HeaderComponent {
 
   constructor() { }
 
-  elements: Array<string> = [ 'Home', 'Proyects', 'Contact'];
-
+  elements: Array<string> = [ 'Home', 'Services', 'Contact'];
 
 }
